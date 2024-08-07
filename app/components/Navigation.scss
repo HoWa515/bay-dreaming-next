@@ -1,0 +1,32 @@
+.main-nav {
+  display: flex;
+  flex: 0 0 50%;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  &__item {
+  }
+
+  &__link:link,
+  &__link:visited {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    color: var(--color-grey-dark);
+  }
+
+  &__link:hover::after {
+    transform: translateY(-1.5rem) scale(1);
+    transition: all 0.3s;
+  }
+
+  &__link::after {
+    content: "";
+    display: inline-block;
+    height: 0.3rem;
+    width: 100%;
+    background-color: var(--color-tertiary-dark);
+    transform: translateY(-1.5rem) scale(0);
+    transform-origin: left;
+  }
+}
